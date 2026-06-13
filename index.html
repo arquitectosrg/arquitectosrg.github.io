@@ -1,51 +1,288 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arquitectos RG</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arquitectos RG | Arquitectura, Urbanismo y Gestión</title>
+
+  <style>
+    :root {
+      --gris-oscuro: #2f2f2f;
+      --gris-medio: #777777;
+      --gris-claro: #f4f4f4;
+      --blanco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--gris-oscuro);
+      background: var(--blanco);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      background: #fff;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo img {
+      width: 95px;
+      height: auto;
+    }
+
+    .logo-texto h1 {
+      margin: 0;
+      font-size: 1.35rem;
+      letter-spacing: 1px;
+    }
+
+    .logo-texto p {
+      margin: 2px 0 0;
+      color: var(--gris-medio);
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      margin-left: 22px;
+      text-decoration: none;
+      color: var(--gris-oscuro);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      min-height: 72vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("portada.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 8%;
+      color: white;
+    }
+
+    .hero-contenido {
+      max-width: 780px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin: 0 0 18px;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+    }
+
+    .boton {
+      display: inline-block;
+      padding: 13px 22px;
+      border: 1px solid white;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 12px;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      max-width: 950px;
+      font-size: 1.1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: var(--gris-claro);
+      padding: 28px;
+      border-left: 5px solid var(--gris-medio);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .datos {
+      background: var(--gris-oscuro);
+      color: white;
+    }
+
+    .datos a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      padding: 25px 8%;
+      background: #1f1f1f;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 850px) {
+      header {
+        display: block;
+      }
+
+      nav {
+        margin-top: 18px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 0 14px 8px 0;
+      }
+
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .logo img {
+        width: 75px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>ARQUITECTOS RG</h1>
+<header>
+  <div class="logo">
+    <img src="logo.jpg" alt="Arquitectos RG">
+    <div class="logo-texto">
+      <h1>ARQUITECTOS RG</h1>
+      <p>Arquitectura · Urbanismo · Gestión</p>
+    </div>
+  </div>
 
-<h2>Ezequiel Rius Cordero</h2>
-<p>Arquitecto COAS 4921</p>
+  <nav>
+    <a href="#estudio">Estudio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
 
-<h2>María Dolores Gómez Ortega</h2>
-<p>Arquitecta COAS 4677</p>
+<main>
 
-<hr>
+  <section class="hero">
+    <div class="hero-contenido">
+      <h2>Arquitectura, urbanismo y gestión técnica</h2>
+      <p>
+        Estudio de arquitectura con sede profesional en Sevilla, especializado en proyectos,
+        informes técnicos, urbanismo, dirección de obra y gestión integral de expedientes.
+      </p>
+      <a class="boton" href="mailto:estudio@arquitectosrg.es">Contactar por correo</a>
+      <a class="boton" href="tel:+34651913434">Llamar</a>
+    </div>
+  </section>
 
-<h2>Servicios</h2>
+  <section id="estudio">
+    <h2>Estudio</h2>
+    <div class="intro">
+      <p>
+        Arquitectos RG desarrolla trabajos de arquitectura, urbanismo y gestión técnica,
+        incluyendo actuaciones propias del ámbito competencial de la profesión de arquitecto.
+      </p>
 
-<ul>
-<li>Proyectos de edificación</li>
-<li>Dirección de obra</li>
-<li>Coordinación de seguridad y salud</li>
-<li>Informes periciales</li>
-<li>Inspección Técnica de Edificios (ITE)</li>
-<li>Urbanismo</li>
-<li>Declaraciones responsables</li>
-<li>Licencias urbanísticas</li>
-</ul>
+      <p>
+        El estudio está integrado por Ezequiel Rius Cordero, Arquitecto COAS 4921,
+        y María Dolores Gómez Ortega, Arquitecta COAS 4677.
+      </p>
+    </div>
+  </section>
 
-<hr>
+  <section id="servicios">
+    <h2>Servicios</h2>
 
-<h2>Ámbito de actuación</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Arquitectura</h3>
+        <p>
+          Proyectos de edificación, rehabilitación, dirección facultativa,
+          certificados, documentación técnica y tramitación de licencias.
+        </p>
+      </div>
 
-<p>
-Sevilla, Sierra Norte, Huelva y resto de Andalucía.
-</p>
+      <div class="card">
+        <h3>Urbanismo</h3>
+        <p>
+          Estudios urbanísticos, informes de viabilidad, expedientes de legalización,
+          AFO, georreferenciaciones y asesoramiento técnico.
+        </p>
+      </div>
 
-<hr>
+      <div class="card">
+        <h3>Gestión técnica</h3>
+        <p>
+          Informes, tasaciones, ITE, CEE, actuaciones turísticas, patrimoniales,
+          declaraciones responsables y coordinación de expedientes.
+        </p>
+      </div>
+    </div>
+  </section>
 
-<h2>Contacto</h2>
+  <section>
+    <h2>Ámbito de actuación</h2>
+    <p class="intro">
+      Trabajos profesionales en Sevilla, Sierra Norte, Huelva y resto de Andalucía.
+    </p>
+  </section>
 
-<p>
-Correo: info@arquitectosrg.es
-</p>
+  <section id="contacto" class="datos">
+    <h2>Contacto</h2>
+
+    <p>
+      Correo electrónico:<br>
+      <a href="mailto:estudio@arquitectosrg.es">estudio@arquitectosrg.es</a>
+    </p>
+
+    <p>
+      Teléfonos:<br>
+      <a href="tel:+34651913434">651 913 434</a><br>
+      <a href="tel:+34649424209">649 424 209</a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  © Arquitectos RG · www.arquitectosrg.es
+</footer>
 
 </body>
 </html>
