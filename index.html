@@ -3,350 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Arquitectos RG | Arquitectura, Urbanismo y Gestión Técnica</title>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:Arial, Helvetica, sans-serif;
-color:#333;
-line-height:1.7;
-background:#ffffff;
-}
-
-header{
-background:#ffffff;
-padding:20px 8%;
-border-bottom:1px solid #dddddd;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:20px;
-}
-
-.logo img{
-width:130px;
-height:auto;
-}
-
-.logo h1{
-font-size:2rem;
-margin-bottom:5px;
-}
-
-.logo p{
-color:#666;
-font-size:1.1rem;
-}
-
-nav a{
-text-decoration:none;
-color:#222;
-font-weight:bold;
-margin-left:25px;
-}
-
-.hero{
-background:
-linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40)),
-url('portada.jpg');
-background-size:cover;
-background-position:center;
-min-height:600px;
-display:flex;
-align-items:center;
-padding:80px 8%;
-color:white;
-}
-
-.hero-contenido{
-max-width:800px;
-}
-
-.hero h2{
-font-size:4rem;
-line-height:1.1;
-margin-bottom:25px;
-}
-
-.hero p{
-font-size:1.35rem;
-margin-bottom:30px;
-}
-
-.boton{
-display:inline-block;
-padding:14px 24px;
-border:2px solid white;
-color:white;
-text-decoration:none;
-margin-right:15px;
-font-weight:bold;
-}
-
-section{
-padding:70px 8%;
-}
-
-h2{
-margin-bottom:25px;
-font-size:2.2rem;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-margin-top:25px;
-}
-
-.tarjeta{
-background:#f7f7f7;
-padding:25px;
-border-left:5px solid #666;
-}
-
-.tarjeta h3{
-margin-bottom:15px;
-}
-
-.tarjeta ul{
-padding-left:20px;
-}
-
-.tarjeta li{
-margin-bottom:8px;
-}
-
-.experiencia{
-background:#efefef;
-}
-
-.contacto{
-background:#333;
-color:white;
-}
-
-.contacto a{
-color:white;
-text-decoration:none;
-}
-
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:25px;
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;color:#222;line-height:1.7;background:#fff}
+header{background:#fff;padding:20px 8%;border-bottom:1px solid #ddd;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000}
+.logo{display:flex;align-items:center;gap:20px}
+.logo img{width:120px;height:auto}
+.logo h1{font-size:2rem;margin-bottom:4px}
+.logo p{color:#666;font-size:1.05rem}
+nav a{text-decoration:none;color:#222;font-weight:bold;margin-left:24px}
+.hero{background:linear-gradient(rgba(0,0,0,.42),rgba(0,0,0,.42)),url('portada.jpg');background-size:cover;background-position:center;min-height:580px;display:flex;align-items:center;padding:80px 8%;color:white}
+.hero-contenido{max-width:820px}
+.hero h2{font-size:3.8rem;line-height:1.1;margin-bottom:24px}
+.hero p{font-size:1.35rem;margin-bottom:30px}
+.boton{display:inline-block;padding:14px 24px;border:2px solid white;color:white;text-decoration:none;margin-right:14px;font-weight:bold}
+section{padding:70px 8%}
+h2{font-size:2.2rem;margin-bottom:25px}
+h3{margin-bottom:14px}
+.franja{background:#f1f1f1}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;margin-top:25px}
+.tarjeta{background:#f8f8f8;padding:26px;border-left:5px solid #666}
+.tarjeta ul{padding-left:20px}
+.tarjeta li{margin-bottom:8px}
+.equipo{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;margin-top:25px}
+.contacto{background:#333;color:white}
+.contacto a{color:white;text-decoration:none;font-weight:bold}
+footer{background:#222;color:white;text-align:center;padding:25px}
 @media(max-width:768px){
-
-header{
-flex-direction:column;
-text-align:center;
+header{flex-direction:column;text-align:center}
+nav{margin-top:18px}
+nav a{display:inline-block;margin:8px}
+.hero{min-height:450px}
+.hero h2{font-size:2.3rem}
+.logo img{width:95px}
 }
-
-nav{
-margin-top:20px;
-}
-
-nav a{
-display:inline-block;
-margin:10px;
-}
-
-.hero{
-min-height:450px;
-}
-
-.hero h2{
-font-size:2.4rem;
-}
-
-.logo img{
-width:100px;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
 <header>
-
 <div class="logo">
-
 <img src="logo.jpg" alt="Arquitectos RG">
-
 <div>
-
 <h1>ARQUITECTOS RG</h1>
-
-<p>Arquitectura · Urbanismo · Gestión</p>
-
+<p>Arquitectura · Urbanismo · Gestión Técnica</p>
 </div>
-
 </div>
 
 <nav>
-
 <a href="#estudio">Estudio</a>
 <a href="#servicios">Servicios</a>
 <a href="#contacto">Contacto</a>
-
 </nav>
-
 </header>
 
 <section class="hero">
-
 <div class="hero-contenido">
-
 <h2>Arquitectura, urbanismo y gestión técnica</h2>
-
-<p>
-Estudio de arquitectura especializado en arquitectura,
-urbanismo y gestión técnica.
-</p>
-
+<p>Estudio de arquitectura especializado en arquitectura, urbanismo y gestión técnica.</p>
 <a class="boton" href="mailto:estudio@arquitectosrg.es">Contactar por correo</a>
-
 <a class="boton" href="tel:+34651913434">Llamar</a>
-
 </div>
-
 </section>
 
 <section id="estudio">
-
 <h2>Estudio</h2>
-
 <p>
-
-Más de 25 años desarrollando trabajos de arquitectura,
-urbanismo y gestión técnica para particulares,
-empresas y administraciones públicas.
-
+Arquitectos RG es un estudio profesional con más de 25 años de experiencia
+en arquitectura, urbanismo y gestión técnica, desarrollando trabajos para
+particulares, empresas y administraciones públicas.
 </p>
 
+<div class="equipo">
+<div class="tarjeta">
+<h3>Ezequiel Rius Cordero</h3>
+<p>Arquitecto colegiado en el Colegio Oficial de Arquitectos de Sevilla.</p>
+<p><strong>COAS nº 4.921</strong></p>
+</div>
+
+<div class="tarjeta">
+<h3>María Dolores Gómez Ortega</h3>
+<p>Arquitecta colegiada en el Colegio Oficial de Arquitectos de Sevilla.</p>
+<p><strong>COAS nº 4.677</strong></p>
+</div>
+</div>
 </section>
 
-<section class="experiencia" id="servicios">
-
-<h2>Servicios Profesionales</h2>
+<section class="franja" id="servicios">
+<h2>Servicios profesionales</h2>
 
 <div class="grid">
 
 <div class="tarjeta">
-
 <h3>Arquitectura</h3>
-
 <ul>
-<li>Obra nueva</li>
-<li>Reformas</li>
-<li>Rehabilitación</li>
-<li>Dirección de obra</li>
-<li>Coordinación de seguridad y salud</li>
+<li>Proyectos de obra nueva.</li>
+<li>Reformas.</li>
+<li>Rehabilitación.</li>
+<li>Dirección de obra.</li>
+<li>Coordinación de seguridad y salud.</li>
 </ul>
-
 </div>
 
 <div class="tarjeta">
-
 <h3>Urbanismo</h3>
-
 <ul>
-<li>Estudios urbanísticos</li>
-<li>Desarrollos urbanísticos</li>
-<li>Proyectos de Actuación en Suelo Rústico</li>
-<li>Parcelaciones y segregaciones</li>
-<li>Divisiones horizontales</li>
-<li>AFO en suelo urbano y rústico</li>
+<li>Estudios e informes urbanísticos.</li>
+<li>Innovaciones de planeamiento.</li>
+<li>Proyectos de Actuación.</li>
+<li>Parcelaciones, segregaciones y divisiones horizontales.</li>
+<li>Regularización de edificaciones.</li>
+<li>AFO y procedimientos equivalentes.</li>
 </ul>
-
 </div>
 
 <div class="tarjeta">
-
-<h3>Gestión Técnica</h3>
-
+<h3>Gestión técnica</h3>
 <ul>
-<li>Gestiones ante ayuntamientos</li>
-<li>Administraciones públicas</li>
-<li>Organismos oficiales</li>
-<li>Empresas suministradoras</li>
-<li>Empresas instaladoras</li>
+<li>Tramitaciones administrativas.</li>
+<li>Licencias urbanísticas y declaraciones responsables (DR).</li>
+<li>Gestión ante administraciones públicas.</li>
+<li>Asistencia técnica municipal.</li>
 </ul>
-
 </div>
 
-</div>
-
-<div class="tarjeta" style="margin-top:30px;">
-
+<div class="tarjeta">
 <h3>Otros trabajos profesionales</h3>
-
 <ul>
-<li>Licencias urbanísticas</li>
-<li>Informes técnicos</li>
-<li>Tasaciones</li>
-<li>Inspección Técnica de Edificios (ITE)</li>
-<li>Certificados Energéticos (CEE)</li>
-<li>Georreferenciaciones</li>
-<li>Actividades turísticas</li>
-<li>Patrimonio</li>
+<li>Informes periciales.</li>
+<li>Licencias de apertura de negocios y actividades.</li>
+<li>Inspección Técnica de Edificios (ITE).</li>
+<li>Certificados energéticos.</li>
+<li>Tasaciones y valoraciones.</li>
 </ul>
-
 </div>
 
+<div class="tarjeta">
+<h3>Otras actuaciones</h3>
+<ul>
+<li>Turístico.</li>
+<li>Patrimonial.</li>
+<li>Administrativo.</li>
+<li>Sanitario.</li>
+<li>Docente.</li>
+<li>Cultural.</li>
+<li>Ambiental.</li>
+<li>Otras, consultar.</li>
+</ul>
+</div>
+
+</div>
 </section>
 
 <section class="contacto" id="contacto">
-
 <h2>Contacto</h2>
 
 <p>
-Correo electrónico:
-<br>
-<a href="mailto:estudio@arquitectosrg.es">
-estudio@arquitectosrg.es
-</a>
+Correo electrónico:<br>
+<a href="mailto:estudio@arquitectosrg.es">estudio@arquitectosrg.es</a>
 </p>
 
 <br>
 
 <p>
-Teléfonos:
-<br>
-<a href="tel:+34651913434">651 91 34 34</a>
-<br>
-<a href="tel:+34649424209">649 42 42 09</a>
+Teléfonos:<br>
+Ezequiel: <a href="tel:+34651913434">651 913 434</a><br>
+Mariló: <a href="tel:+34649424209">649 424 209</a>
 </p>
-
 </section>
 
 <footer>
-
-Arquitectos RG · Arquitectura · Urbanismo · Gestión Técnica
-
+Arquitectos RG · Arquitectura · Urbanismo · Gestión Técnica · www.arquitectosrg.es
 </footer>
 
 </body>
